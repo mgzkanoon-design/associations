@@ -46,10 +46,16 @@ export function CookieBanner() {
     <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-4xl rounded-2xl border bg-background/95 p-4 shadow-lg backdrop-blur">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted-foreground leading-relaxed">
-          نحن نستخدم ملفات تعريف الارتباط (Cookies) التقنية الضرورية لتحسين تجربة المستخدم.
-          يمكنك قبولها أو رفضها.{" "}
+
+          We use essential cookies to improve your experience (Cookies).
+Accept or decline.
+          
+
+       
+          
+          {" "}
           <a href="/politique-de-confidentialite" className="underline text-foreground">
-            سياسة الخصوصية
+            privacy-policy  
           </a>
         </p>
 
@@ -58,13 +64,13 @@ export function CookieBanner() {
             onClick={reject}
             className="rounded-xl border px-4 py-2 text-sm"
           >
-            رفض
+            decline
           </button>
           <button
             onClick={accept}
             className="rounded-xl bg-foreground px-4 py-2 text-sm text-background"
           >
-            قبول
+            Accept
           </button>
         </div>
       </div>

@@ -55,9 +55,11 @@ export function Partnerships({ t }: PartnershipsProps) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-balance">
             {t.partnerships.title}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed">
-            {t.partnerships.description}
-          </p>
+          <h3 className="text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed">
+          <strong>  {t.partnerships.descriptionbe}</strong>
+                        {t.partnerships.description}
+
+          </h3>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -72,7 +74,8 @@ export function Partnerships({ t }: PartnershipsProps) {
                   {partnership.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-pretty">
-                  {partnership.description}
+                                    {partnership.description}
+
                 </p>
               </Card>
             )
@@ -86,6 +89,7 @@ export function Partnerships({ t }: PartnershipsProps) {
               {t.partnerships.partnersTitle}
             </h3>
             <p className="mt-3 text-muted-foreground leading-relaxed text-pretty">
+              
               {t.partnerships.partnersDescription}
             </p>
           </div>

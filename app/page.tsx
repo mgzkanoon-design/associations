@@ -12,6 +12,7 @@ import { News } from "@/components/news"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { translations, type Language } from "@/lib/i18n"
+import { FaqSection } from "@/components/faq-section"
 
 export default function Home() {
   const [currentLang, setCurrentLang] = useState<Language>("en")
@@ -19,11 +20,14 @@ export default function Home() {
   const t = translations[currentLang]
 
   const handleLanguageChange = (lang: string) => {
-    setCurrentLang(lang as Language)
-    // Set document direction for RTL languages
-    if (lang === "ar") {
+    const selectedLang = lang as Language
+    setCurrentLang(selectedLang)
+
+    // RTL support for Arabic
+    if (selectedLang === "ar") {
       document.documentElement.setAttribute("dir", "rtl")
-      document.documentElement.style.fontFamily = "var(--font-arabic), sans-serif"
+      document.documentElement.style.fontFamily =
+        "var(--font-arabic), sans-serif"
     } else {
       document.documentElement.setAttribute("dir", "ltr")
       document.documentElement.style.fontFamily = ""
@@ -32,8 +36,16 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <Header t={t} currentLang={currentLang} onLanguageChange={handleLanguageChange} />
+      <Header
+        t={t}
+        currentLang={currentLang}
+        onLanguageChange={handleLanguageChange}
+      />
+
+      {/* ✅ H1 should be inside Hero */}
       <Hero t={t} />
+
+      {/* Sections with H2 / H3 inside components */}
       <Mission t={t} />
       <About t={t} />
       <Actions t={t} />
@@ -41,6 +53,10 @@ export default function Home() {
       <Partnerships t={t} />
       <News t={t} />
       <Contact t={t} />
+
+      {/* ✅ FAQ section (SEO booster – H2/H3, long-tail keywords) */}
+      <FaqSection lang={currentLang} />
+
       <Footer t={t} />
     </main>
   )

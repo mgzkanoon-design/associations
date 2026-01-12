@@ -34,6 +34,8 @@ export function InternationalVision({ t }: InternationalVisionProps) {
           </h2>
           <p className="text-xl sm:text-2xl text-primary font-semibold mb-4 sm:mb-6">{t.international.subtitle}</p>
           <p className="text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed">
+                     <strong>{t.international.descriptionbefor}</strong>
+
             {t.international.description}
           </p>
         </div>

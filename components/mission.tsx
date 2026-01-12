@@ -31,7 +31,11 @@ export function Mission({ t }: MissionProps) {
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-balance">{t.mission.title}</h2>
           <p className="text-lg sm:text-xl text-muted-foreground text-pretty leading-relaxed">
-            {t.mission.description}
+
+            {t.mission.descriptionBefor}
+  <strong>{t.mission.associationName}</strong>
+            {t.mission.descriptionAfter}
+
           </p>
         </div>
 

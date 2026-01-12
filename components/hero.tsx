@@ -23,14 +23,21 @@ export function Hero({ t }: HeroProps) {
           <div className="mb-6 sm:mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium border border-white/30">
             <Users className="h-4 w-4" />
             {t.about.founded}
+            
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 text-balance leading-tight text-white drop-shadow-lg">
             {t.hero.title}
           </h1>
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl  mb-6 sm:mb-8 text-balance leading-tight text-white drop-shadow-lg">
+            {t.hero.title1}
+          </h2>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto text-pretty leading-relaxed drop-shadow-md">
+          <p className="text-lg sm:text-xl font-bold md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto text-pretty leading-relaxed drop-shadow-md">
             {t.hero.subtitle}
+          </p>
+                    <p className="text-l sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow-md">
+            {t.hero.subtitle1}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

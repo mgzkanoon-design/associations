@@ -17,6 +17,8 @@ export function About({ t }: AboutProps) {
           <div className="space-y-6 sm:space-y-8">
             <Card className="p-6 sm:p-8">
               <p className="text-base sm:text-lg leading-relaxed text-muted-foreground text-pretty">
+                                <strong> {t.about.founded1} </strong>
+
                 {t.about.history}
               </p>
             </Card>
